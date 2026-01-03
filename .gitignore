@@ -34,6 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# gatsby
+# gatsby (removed - public folder is needed for Next.js static assets)
 .cache
-public
