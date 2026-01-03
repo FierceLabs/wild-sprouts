@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import "./fonts.css";
 
+/* Title font letter spacing */
+.font-serif {
+    letter-spacing: 0.02em;
+}
 
 /* ||||||||||||||||| Header ||||||||||||||||||||||||||| */
 .nav {
