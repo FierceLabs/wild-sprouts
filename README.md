@@ -1,99 +1,145 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Wild Sprouts Homestead School
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+A Next.js website for Wild Sprouts Homestead School - a nature-based early childhood education program.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## 🚀 Getting Started
 
-## 🚀 Quick start
+### Prerequisites
 
-1.  **Create a Gatsby site.**
+- Node.js 18+
+- npm or yarn
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+### Installation
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+1. Install dependencies:
+```bash
+npm install
+```
 
-1.  **Start developing.**
+2. Move images to public directory:
+```bash
+# The images need to be moved from src/images to public/images
+mkdir -p public/images
+cp src/images/* public/images/
+```
 
-    Navigate into your new site’s directory and start it up.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-1.  **Open the source code and start editing!**
+## 📁 Project Structure
 
-    Your site is now running at `http://localhost:8000`!
+```
+wander-sites/
+├── src/
+│   ├── app/              # Next.js app directory (pages)
+│   │   ├── layout.js     # Root layout
+│   │   ├── page.js       # Home page
+│   │   ├── about/        # About & Philosophy page
+│   │   ├── programs/     # Programs page
+│   │   ├── staff/        # Staff page
+│   │   └── contact/      # Contact page
+│   ├── components/       # Reusable React components
+│   ├── hooks/            # Custom React hooks
+│   └── styles/           # Global styles and fonts
+├── public/               # Static assets
+│   ├── wild-sprouts-logo.png
+│   └── images/           # Image assets
+└── package.json
+```
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+## 🎨 Pages
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+- **Home** (`/`) - Hero section, features, daily schedule, testimonials, FAQ
+- **About & Philosophy** (`/about`) - School story, philosophy, core values
+- **Programs** (`/programs`) - Age groups, curriculum, daily schedule
+- **Staff** (`/staff`) - Staff bios, credentials, trust signals
+- **Contact** (`/contact`) - Contact form, tour scheduling, map, Brightwheel link
 
-## 🚀 Quick start (Netlify)
+## 🛠 Built With
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- **Next.js 14** - React framework with App Router
+- **React 18** - UI library
+- **Tailwind CSS** - Styling
+- **React Slick** - Carousel/slider component
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## 🎨 Customization
 
-## 🧐 What's inside?
+### Colors
 
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+Update colors in `tailwind.config.js`:
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
+```js
+colors: {
+  beige: { b1: "#F5F3E7" },
+  green: { g1: "#8C943E" },
+  gray: { g1: "#46594D" },
+  orange: { o1: "#F0AB6F" },
+  blue: { b1: "#98BFD0" },
+}
+```
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+### Fonts
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+The site uses:
+- **PerfectlyVintages** (serif) - Headings
+- **Inter** (sans-serif) - Body text
 
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+Fonts are loaded from `src/styles/fonts.css` and `src/fonts/`
 
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## 📝 Content Updates
 
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+To update content:
 
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+1. **Navigation**: Edit `src/components/Header.js`
+2. **Footer**: Edit `src/components/Footer.js`
+3. **Homepage sections**: Edit component files in `src/components/`
+4. **Page content**: Edit files in `src/app/[page]/page.js`
 
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+## 🚢 Deployment
 
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+### Build for Production
 
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+```bash
+npm run build
+npm start
+```
 
-1.  **`README.md`**: A text file containing useful reference information about your project.
+### Deploy to Vercel
 
-## 🎓 Learning Gatsby
+The easiest way to deploy is with [Vercel](https://vercel.com):
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+```bash
+npm install -g vercel
+vercel
+```
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+## 📧 Contact Information
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+Update contact details in:
+- `src/app/contact/page.js`
+- `src/components/Footer.js`
+- `src/components/Header.js` (social media links)
 
-## 💫 Deploy
+## ⚠️ Important Notes
 
-[Build, Deploy, and Host On Netlify](https://netlify.com)
+1. **Images**: Make sure all images from `src/images/` are copied to `public/images/` before running
+2. **Logo**: The Wild Sprouts logo should be at `public/wild-sprouts-logo.png`
+3. **Forms**: The contact form is currently client-side only. Integrate with a backend/service for actual submissions
+4. **Map**: The map on the contact page is a placeholder. Integrate Google Maps or similar service
+5. **Brightwheel**: Update the Brightwheel link with your actual school's URL
 
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
+## 🔄 Migration Notes
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+This site was migrated from Gatsby to Next.js 14:
+- Removed `gatsby-plugin-image` and replaced with Next.js `Image`
+- Removed Gatsby-specific components and replaced with Next.js equivalents
+- Updated routing from Gatsby's file-based to Next.js App Router
+- Converted all components to use Next.js conventions
+
+## 📄 License
+
+This project is private and proprietary to Wild Sprouts Homestead School.
