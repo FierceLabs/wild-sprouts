@@ -69,9 +69,9 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(-1)
 
   return (
-    <section className="bg-blue-b1 relative pb-0 mb-[-220px] overflow-hidden">
+    <section className="bg-blue-b1 relative pb-0 overflow-hidden">
       <div className="wave wave-top w-full text-coolGray-900"></div>
-      <div className="py-24 pb-64 bg-coolGray-900 relative z-10">
+      <div className="py-24 pb-12 bg-coolGray-900 relative z-10">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full md:w-1/2 px-4 mb-20 md:mb-0">
@@ -101,11 +101,11 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-      <div className="w-full relative z-50 mt-[-250px]">
+      <div className="w-full bg-coolGray-900">
         <svg
           width="1920"
-          height="350"
-          viewBox="0 0 1920 350"
+          height="150"
+          viewBox="0 0 1920 150"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full block"
@@ -113,7 +113,7 @@ export default function FAQ() {
           preserveAspectRatio="none"
         >
           <path
-            d="M1919.93 86.1175H1453.41C1111.1 86.1175 773.652 0 480.033 0C186.415 0 0.0664062 86.1175 0.0664062 86.1175V350H1919.93V86.1175Z"
+            d="M1919.93 36.9075H1453.41C1111.1 36.9075 773.652 0 480.033 0C186.415 0 0.0664062 36.9075 0.0664062 36.9075V150H1919.93V36.9075Z"
             fill="#46594D"
           />
         </svg>
