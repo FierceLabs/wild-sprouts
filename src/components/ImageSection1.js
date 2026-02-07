@@ -15,7 +15,7 @@ export default function ImageSection() {
       <div className="absolute inset-0 overflow-hidden">
         <HlsVideo
           src={videoSrc}
-          poster="/barn.jpg"
+          poster="/farmstead.png"
           autoPlay={true}
           muted={true}
           loop={true}
