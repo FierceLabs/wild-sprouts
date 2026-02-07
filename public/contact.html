@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+</head>
+<body>
+  <!-- This file is for Netlify Forms detection at build time -->
+  <!-- The actual form is rendered by React in /contact -->
+
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <select name="childAge">
+      <option value="">Select age</option>
+      <option value="2">2 years old</option>
+      <option value="3">3 years old</option>
+      <option value="4">4 years old</option>
+      <option value="5">5 years old</option>
+      <option value="6">6 years old</option>
+      <option value="other">Other</option>
+    </select>
+    <select name="interest">
+      <option value="">Please select</option>
+      <option value="tour">Scheduling a tour</option>
+      <option value="enrollment">Enrollment information</option>
+      <option value="programs">Learning about programs</option>
+      <option value="general">General questions</option>
+      <option value="employment">Employment opportunities</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input name="bot-field" />
+  </form>
+</body>
+</html>

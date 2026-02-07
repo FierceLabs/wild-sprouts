@@ -1,0 +1,123 @@
+"use client"
+
+import { useState } from "react"
+
+const faqs = [
+  {
+    question: "What ages do you serve?",
+    answer:
+      "We welcome children ages 2-6 years old. Our mixed-age approach allows younger children to learn from older peers while older children develop leadership skills.",
+  },
+  {
+    question: "What are your program hours and schedule?",
+    answer:
+      "Classes run Monday through Thursday, 9:30am to 1:30pm. Our school year follows the traditional calendar, running from Labor Day (September) through Memorial Day (May).",
+  },
+  {
+    question: "Do children need previous experience with animals?",
+    answer:
+      "No previous experience is necessary! We teach children how to safely and respectfully interact with our animals including Cooper the horse, sheep Marvin and Maynard, Roo the rooster and the hens, bunnies Leo and Tootsie, Dixie the cat, and Bear the dog. Our experienced staff guides each child at their own pace.",
+  },
+  {
+    question: "How can I schedule a tour?",
+    answer:
+      "You can schedule a tour by contacting us through our website's contact form, calling us directly, or sending us an email. We're located at 2125 E. Star Ln in Meridian, Idaho and offer tours on weekday mornings so you can see our program in action.",
+  },
+]
+
+function FAQItem({ question, answer, isOpen, onClick }) {
+  return (
+    <div className="mb-6">
+      <button
+        className="flex flex-wrap w-full text-left items-start"
+        onClick={onClick}
+      >
+        <div className="flex-1 md:pr-10">
+          <h3 className="mb-2 text-xl text-white font-bold">{question}</h3>
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              isOpen ? "max-h-96 opacity-100 mb-2" : "max-h-0 opacity-0"
+            }`}
+          >
+            <p className="max-w-md text-coolGray-400 font-medium">{answer}</p>
+          </div>
+        </div>
+        <div className="ml-auto text-white flex-shrink-0">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`transform transition-transform duration-300 ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          >
+            <path
+              d="M11.29 15.71C11.3851 15.801 11.4972 15.8724 11.62 15.92C11.8635 16.02 12.1365 16.02 12.38 15.92C12.5028 15.8724 12.6149 15.801 12.71 15.71L15.71 12.71C15.8983 12.5217 16.0041 12.2663 16.0041 12C16.0041 11.7337 15.8983 11.4783 15.71 11.29C15.5217 11.1017 15.2663 10.9959 15 10.9959C14.7337 10.9959 14.4783 11.1017 14.29 11.29L13 12.59L13 9C13 8.73479 12.8946 8.48043 12.7071 8.2929C12.5196 8.10536 12.2652 8 12 8C11.7348 8 11.4804 8.10536 11.2929 8.2929C11.1054 8.48043 11 8.73479 11 9L11 12.59L9.71 11.29C9.61704 11.1963 9.50644 11.1219 9.38458 11.0711C9.26272 11.0203 9.13201 10.9942 9 10.9942C8.86799 10.9942 8.73728 11.0203 8.61542 11.0711C8.49356 11.1219 8.38296 11.1963 8.29 11.29C8.19627 11.383 8.12188 11.4936 8.07111 11.6154C8.02034 11.7373 7.9942 11.868 7.9942 12C7.9942 12.132 8.02034 12.2627 8.07111 12.3846C8.12188 12.5064 8.19627 12.617 8.29 12.71L11.29 15.71ZM12 22C13.9778 22 15.9112 21.4135 17.5557 20.3147C19.2002 19.2159 20.4819 17.6541 21.2388 15.8268C21.9957 13.9996 22.1937 11.9889 21.8079 10.0491C21.422 8.10929 20.4696 6.32746 19.0711 4.92894C17.6725 3.53041 15.8907 2.578 13.9509 2.19215C12.0111 1.8063 10.0004 2.00433 8.17317 2.76121C6.3459 3.51809 4.78412 4.79981 3.6853 6.4443C2.58649 8.08879 2 10.0222 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7363 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22ZM12 4C13.5823 4 15.129 4.4692 16.4446 5.34825C17.7602 6.2273 18.7855 7.47673 19.391 8.93854C19.9965 10.4003 20.155 12.0089 19.8463 13.5607C19.5376 15.1126 18.7757 16.538 17.6569 17.6569C16.538 18.7757 15.1126 19.5376 13.5607 19.8463C12.0089 20.155 10.4003 19.9965 8.93853 19.391C7.47672 18.7855 6.22729 17.7602 5.34824 16.4446C4.46919 15.129 4 13.5823 4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84286 9.87827 4 12 4Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  )
+}
+
+export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState(-1)
+
+  return (
+    <section className="bg-blue-b1 relative pb-0 overflow-hidden">
+      <div className="wave wave-top w-full text-coolGray-900"></div>
+      <div className="py-24 pb-12 bg-coolGray-900 relative z-10">
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full md:w-1/2 px-4 mb-20 md:mb-0">
+              <div className="max-w-md">
+                <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium rounded-full shadow-sm">
+                  FAQ
+                </span>
+                <h2 className="mb-4 text-4xl md:text-5xl leading-tight text-white font-bold tracking-tighter font-serif">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-lg md:text-xl text-coolGray-400 font-medium">
+                  Have questions about enrollment, our programs, or what a day
+                  looks like at Wild Sprouts? We're here to help!
+                </p>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 px-4">
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full bg-coolGray-900">
+        <svg
+          width="1920"
+          height="150"
+          viewBox="0 0 1920 150"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full block"
+          style={{ display: "block" }}
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M1919.93 36.9075H1453.41C1111.1 36.9075 773.652 0 480.033 0C186.415 0 0.0664062 36.9075 0.0664062 36.9075V150H1919.93V36.9075Z"
+            fill="#46594D"
+          />
+        </svg>
+      </div>
+    </section>
+  )
+}

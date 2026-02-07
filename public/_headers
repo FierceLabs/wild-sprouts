@@ -1,0 +1,11 @@
+/hls/*.m3u8
+  Content-Type: application/vnd.apple.mpegurl
+
+/hls/**/*.m3u8
+  Content-Type: application/vnd.apple.mpegurl
+
+/hls/*.ts
+  Content-Type: video/mp2t
+
+/hls/**/*.ts
+  Content-Type: video/mp2t
