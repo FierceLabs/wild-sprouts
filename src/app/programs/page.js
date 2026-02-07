@@ -191,21 +191,11 @@ export default function OurDayPage() {
     },
     { src: "/real/img17.png", alt: "Winter activities", title: "Winter Fun" },
     {
-      src: "/real/img18.png",
-      alt: "Exploring outdoors",
-      title: "Outdoor Exploration",
-    },
-    {
       src: "/real/img19.png",
       alt: "Learning in nature",
       title: "Nature Learning",
     },
     { src: "/real/img20.png", alt: "Animal friends", title: "Animal Friends" },
-    {
-      src: "/real/img21.png",
-      alt: "Summer adventures",
-      title: "Summer Adventures",
-    },
     { src: "/real/img22.png", alt: "Summer fun", title: "Summer Fun" },
     {
       src: "/real/img23.png",
