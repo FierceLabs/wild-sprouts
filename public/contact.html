@@ -9,7 +9,9 @@
   <!-- This file is for Netlify Forms detection at build time -->
   <!-- The actual form is rendered by React in /contact -->
 
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
     <input type="text" name="firstName" />
     <input type="text" name="lastName" />
     <input type="email" name="email" />
@@ -32,7 +34,6 @@
       <option value="employment">Employment opportunities</option>
     </select>
     <textarea name="message"></textarea>
-    <input name="bot-field" />
   </form>
 </body>
 </html>
