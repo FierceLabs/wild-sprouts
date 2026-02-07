@@ -1,7 +1,7 @@
 "use client"
 
 import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import {
   FaCheckCircle,
   FaClock,
@@ -12,7 +12,7 @@ import {
   FaPhone,
 } from "react-icons/fa"
 
-export default function ContactPage() {
+function ContactPageContent() {
   const searchParams = useSearchParams()
 
   const [formState, setFormState] = useState({
@@ -589,5 +589,13 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+  )
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="bg-beige-b1 pt-32 min-h-screen" />}>
+      <ContactPageContent />
+    </Suspense>
   )
 }
