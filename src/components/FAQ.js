@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "What ages do you serve?",
     answer:
-      "We welcome children ages 2-6 years old. Our mixed-age approach allows younger children to learn from older peers while older children develop leadership skills.",
+      "We welcome children ages 3-5 years old. Our mixed-age approach allows younger children to learn from older peers while older children develop leadership skills.",
   },
   {
     question: "What are your program hours and schedule?",

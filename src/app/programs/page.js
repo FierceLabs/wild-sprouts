@@ -280,7 +280,7 @@ export default function OurDayPage() {
                 Our Day
               </h1>
               <p className="text-lg md:text-xl text-gray-g1 font-medium">
-                Every day at Wild Sprouts is an adventure. Children ages 2-6
+                Every day at Wild Sprouts is an adventure. Children ages 3-5
                 explore, discover, and grow through hands-on experiences with
                 animals, gardens, and nature. Our school year runs from Labor
                 Day through Memorial Day, with classes Monday through Thursday,
