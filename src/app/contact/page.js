@@ -45,17 +45,23 @@ function ContactPageContent() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    const formData = new URLSearchParams()
-    formData.append("form-name", "contact")
-    Object.entries(formState).forEach(([key, value]) => {
-      formData.append(key, value)
-    })
+    // Build form data as URL-encoded string for Netlify
+    const encode = data => {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&")
+    }
 
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData.toString(),
+        body: encode({
+          "form-name": "contact",
+          ...formState,
+        }),
       })
 
       if (response.ok) {
@@ -140,6 +146,7 @@ function ContactPageContent() {
                 <form
                   name="contact"
                   method="POST"
+                  action="/"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
