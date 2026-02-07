@@ -244,11 +244,9 @@ function ContactPageContent() {
                       className="w-full px-4 py-3 text-coolGray-900 border border-coolGray-300 rounded-lg focus:ring-2 focus:ring-green-g1 focus:border-transparent"
                     >
                       <option value="">Select age</option>
-                      <option value="2">2 years old</option>
                       <option value="3">3 years old</option>
                       <option value="4">4 years old</option>
                       <option value="5">5 years old</option>
-                      <option value="6">6 years old</option>
                       <option value="other">Other</option>
                     </select>
                   </div>

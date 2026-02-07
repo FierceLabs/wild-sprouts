@@ -12,8 +12,13 @@ export const metadata = {
     "Nature-based early childhood education in Meridian, Idaho. Classes Monday-Thursday 9:30am-1:30pm, September through May. Children learn through hands-on experiences with our animals Cooper the horse, sheep Marvin & Maynard, chickens, bunnies, and more.",
   authors: [{ name: "Wild Sprouts Homestead School" }],
   icons: {
-    icon: "/favicon-32x32.png",
-    apple: "/favicon-32x32.png",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   keywords: [
     "nature school",
@@ -33,12 +38,21 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Wild Sprouts Homestead School",
+    images: [
+      {
+        url: "/wild-sprouts-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Wild Sprouts Homestead School Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wild Sprouts Homestead School",
     description:
       "Nature-based early childhood education in Meridian, Idaho. Classes Monday-Thursday 9:30am-1:30pm.",
+    images: ["/wild-sprouts-logo.png"],
   },
   other: {
     "geo.region": "US-ID",

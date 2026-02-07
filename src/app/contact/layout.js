@@ -6,6 +6,21 @@ export const metadata = {
     title: "Contact Wild Sprouts Homestead School",
     description:
       "Schedule a tour of our homestead in Meridian, Idaho. Meet Cooper, Marvin, Maynard, and all our animal friends!",
+    images: [
+      {
+        url: "/wild-sprouts-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Wild Sprouts Homestead School Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Wild Sprouts Homestead School",
+    description:
+      "Schedule a tour of our homestead in Meridian, Idaho. Meet Cooper, Marvin, Maynard, and all our animal friends!",
+    images: ["/wild-sprouts-logo.png"],
   },
 }
 
