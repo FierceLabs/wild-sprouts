@@ -45,23 +45,12 @@ function ContactPageContent() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    // Build form data as URL-encoded string for Netlify
-    const encode = data => {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&")
-    }
-
     try {
-      const response = await fetch("/", {
+      const formData = new FormData(e.target)
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          ...formState,
-        }),
+        body: new URLSearchParams(formData).toString(),
       })
 
       if (response.ok) {
