@@ -543,13 +543,13 @@ function ContactPageContent() {
 
               <div className="mt-8 p-6 bg-white rounded-lg">
                 <p className="text-sm text-coolGray-600 mb-2">
-                  <strong>Tours Available:</strong> Tuesday and Thursday
-                  mornings at 10:00 AM, or by special appointment
+                  <strong>Tours Available:</strong> Outside of classroom hours,
+                  evenings and weekends by appointment only
                 </p>
-                <p className="text-sm text-coolGray-600">
+                {/* <p className="text-sm text-coolGray-600">
                   <strong>Please note:</strong> We limit tours to preserve the
                   calm learning environment for our current students.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

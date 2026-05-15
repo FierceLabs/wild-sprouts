@@ -42,10 +42,19 @@ export default function HlsVideo({
       const hls = new Hls({
         maxBufferLength: 30,
         backBufferLength: 30,
+        startLevel: 1, // Start at 720p (middle quality)
+        abrEwmaDefaultEstimate: 5000000, // Assume 5Mbps bandwidth
+        abrBandWidthFactor: 0.7, // Be conservative about switching down
+        abrBandWidthUpFactor: 0.5, // Be conservative about switching up
       })
 
       hls.loadSource(src)
       hls.attachMedia(video)
+
+      // Lock to 720p quality to prevent switching issues
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        hls.currentLevel = 1 // Force 720p
+      })
 
       return () => {
         video.removeEventListener("ended", handleEnded)
