@@ -32,8 +32,9 @@ export default function ImageSection() {
       <div className="relative z-10 flex-grow flex items-center">
         <div className="absolute top-[30%] left-[10vw]">
           <span className="text-5xl lg:text-7xl text-beige-b1 font-serif">
-            Growing Minds,
-            <br /> Nurturing Nature
+            A unique and wholesome
+            <br />
+            learning experience.
           </span>
           <Image
             width={200}

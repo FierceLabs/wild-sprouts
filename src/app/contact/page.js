@@ -431,9 +431,9 @@ function ContactPageContent() {
               Visit Our Homestead
             </h2>
             <p className="text-lg text-gray-300 font-medium">
-              We're located at 2125 E. Star Ln in Meridian, Idaho. Tours are
-              available by appointment during our school year (September through
-              May) - we'd love to show you around!
+              We're located at 2125 E. Star Ln in Meridian, Idaho. Outside of
+              classroom hours, evenings and weekends by appointment only - we'd
+              love to show you around!
             </p>
           </div>
 

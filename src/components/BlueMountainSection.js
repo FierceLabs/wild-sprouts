@@ -25,7 +25,8 @@ export default function BlueMountainSection() {
                 We welcome families who share our values of nature-based
                 education, hands-on learning, and building strong community
                 connections. Come visit our homestead and see if Wild Sprouts is
-                the right fit for your family.
+                the right fit for your family (outside of classroom hours,
+                evenings and weekends by appointment only ).
               </p>
               <div className="flex flex-wrap">
                 <div className="w-full md:w-auto py-1 md:py-0 md:mr-4">

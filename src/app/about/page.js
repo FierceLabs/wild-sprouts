@@ -246,8 +246,8 @@ export default function AboutPage() {
           <p className="mb-8 text-lg md:text-xl text-gray-g1 font-medium max-w-2xl mx-auto">
             Come see our homestead in action at 2125 E. Star Ln in Meridian,
             Idaho. Meet Cooper, Marvin, Maynard, and all our animal friends!
-            Classes run Monday-Thursday, 9:30am-1:30pm during our school year
-            (September-May).
+            Outside of classroom hours, evenings and weekends by appointment
+            only
           </p>
           <a
             href="/contact?interest=tour"

@@ -298,92 +298,95 @@ export default function OurDayPage() {
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap -mx-4 items-center">
             <FadeIn className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
-              <h2 className="mb-8 text-4xl md:text-5xl text-gray-g1 font-bold font-serif tracking-tighter">
-                A Typical Day
+              <h2 className="mb-4 text-4xl md:text-5xl text-gray-g1 font-bold font-serif tracking-tighter">
+                Daily Schedule
               </h2>
+              <p className="mb-8 text-sm text-coolGray-500 italic">
+                Times are approximate and subject to change
+              </p>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    9:30am
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    9:20-9:30
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-g1">Morning Circle</h4>
+                    <h4 className="font-bold text-gray-g1">Child Drop-off</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    9:30-10:00
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-g1">Classroom Open Play</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    10:00-10:20
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-g1">Circle Time</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    10:20-11:00
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-g1">Snack & Planned Academics</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    11:00-11:30
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-g1">Animal Care & Outside Exploration</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    11:30-12:00
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-g1">Music & Movement</h4>
                     <p className="text-coolGray-500 text-sm">
-                      Songs, stories, and greeting Bear
+                      Outside weather permitting
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    10:00am
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-g1">Morning Work</h4>
-                    <p className="text-coolGray-500 text-sm">
-                      Animal care and garden tasks
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    11:00am
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-g1">Snack & Stories</h4>
-                    <p className="text-coolGray-500 text-sm">
-                      Garden snacks and nature tales
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    11:30am
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-g1">Free Exploration</h4>
-                    <p className="text-coolGray-500 text-sm">
-                      Building, creating, discovering
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    12:15pm
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    12:00-1:00
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-g1">Lunch</h4>
-                    <p className="text-coolGray-500 text-sm">
-                      Family-style with garden produce
-                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    12:45pm
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    1:00-1:20
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-g1">Quiet Time</h4>
-                    <p className="text-coolGray-500 text-sm">
-                      Art, journals, or rest
-                    </p>
+                    <h4 className="font-bold text-gray-g1">Literacy Time & Closing Conversation</h4>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-20 font-bold text-green-g1">
-                    1:30pm
+                  <div className="flex-shrink-0 w-28 font-bold text-green-g1 text-sm">
+                    1:20-1:30
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-g1">Closing Circle</h4>
-                    <p className="text-coolGray-500 text-sm">
-                      Songs and gratitude
-                    </p>
+                    <h4 className="font-bold text-gray-g1">Child Pick-up</h4>
                   </div>
                 </div>
               </div>
