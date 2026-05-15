@@ -14,13 +14,12 @@ export default function HlsVideo({
   className = "",
 }) {
   const videoRef = useRef(null)
-  const hlsRef = useRef(null)
 
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
-    // Handle looping manually for HLS (native loop attribute doesn't work reliably)
+    // Handle looping manually for HLS (native loop attribute doesn't work reliably with hls.js)
     const handleEnded = () => {
       if (loop) {
         video.currentTime = 0
@@ -45,20 +44,12 @@ export default function HlsVideo({
         backBufferLength: 30,
       })
 
-      hlsRef.current = hls
       hls.loadSource(src)
       hls.attachMedia(video)
-
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        if (autoPlay) {
-          video.play().catch(() => {})
-        }
-      })
 
       return () => {
         video.removeEventListener("ended", handleEnded)
         hls.destroy()
-        hlsRef.current = null
       }
     }
 
@@ -67,14 +58,16 @@ export default function HlsVideo({
     return () => {
       video.removeEventListener("ended", handleEnded)
     }
-  }, [src, loop, autoPlay])
+  }, [src, loop])
 
   return (
     <video
       ref={videoRef}
       poster={poster}
       controls={controls}
+      autoPlay={autoPlay}
       muted={muted}
+      loop={loop}
       playsInline={playsInline}
       preload="auto"
       className={className}
