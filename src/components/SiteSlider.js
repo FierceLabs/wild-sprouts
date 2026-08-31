@@ -48,6 +48,13 @@ const animals = [
     imageAlt: "Bear the dog with children",
     image: "/real/bear-1.png",
   },
+  {
+    title: "The Ducks",
+    description:
+      "Our playful ducks waddle around the homestead, bringing joy with their cheerful quacks.",
+    imageAlt: "The ducks at Wild Sprouts",
+    image: "/the-ducks.jpg",
+  },
 ]
 
 function AnimalSliderItem({ title, description, alt, index, image }) {
